@@ -1,0 +1,87 @@
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix">
+      <a class="logo" href="/"><img id="logo_img" src="assets/images/logo_1.png"/></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#" onclick="$('#about_page').modal('show');">About us</a></li>
+          <li><a href="#">Board</a></li>
+          <li><a href="#" onclick="$('#guide_page').modal('show');">Guide</a></li>
+          <li><a href="#" onclick="$('#faq_page').modal('show');">FAQ</a></li>
+          <li><a href="#" onclick="$('#contact_page').modal('show');">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a>
+    </div>
+  </header>
+
+  <div class="user-content">
+    <div id="user-content">
+
+      <div class="small-panel" id="project-header" *ngIf="apiService.isLoggedIn()">
+        <h5>ezPermit Pro 2people</h5>
+        <p>2016.3.21~2016.7.20</p>
+        <a class="btn btn-normal">Check the<br>Detail</a>
+        <a class="btn btn-normal" style="margin-left: 20px; padding: 12px; 20px;">Start</a>
+      </div>
+
+      <div class="small-panel" id="login-header">
+        <div *ngIf="apiService.isLoggedIn()">
+          <h5>Edit User Account</h5>
+          <p class="description">가입정보 및 계정을 관리합니다</p>
+        </div>
+        <div *ngIf="!apiService.isLoggedIn()">
+          <h5>{{ 'log_in' | translate }} / {{ 'sign_up' | translate }}</h5>
+          <p class="description">{{ 'login_description' | translate }}</p>
+        </div>
+        <div class="slide-down">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <app-login *ngIf="!apiService.isLoggedIn()"></app-login>
+      <app-signup *ngIf="!apiService.isLoggedIn()"></app-signup>
+      <app-changepassword *ngIf="apiService.isLoggedIn()"></app-changepassword>
+
+      <div class="small-panel" id="service-header">
+        <div style="display: table-cell;">
+          <h5>Buy Service Account</h5>
+          <p class="description">
+            {{ 'buy_service_description_1' | translate }}<br>
+            {{ 'buy_service_description_2' | translate }}
+          </p>
+        </div>
+        <div class="slide-down">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="login-toggle"><span></span></a>
+  </div>
+
+  <!-- banner text -->
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1" style="width: 100%; margin-left: 0%;">
+      <div class="banner-text text-center">
+        <h2>ezPermit!! BEST SOULTION FOR YOUR<br>SAFE & EFFICIENT PROJECT MANAGEMENT</h2>
+        <p>
+          {{ 'title_1' | translate }}<br>
+          {{ 'title_2' | translate }}<br>
+          {{ 'title_3' | translate }}
+        </p>
+        <div class="scroll-area">
+          <a href="#why" class="watch-btn"> <img src="assets/images/watch.png" style="cursor: pointer;"/></a>
+          <p>Why ezPermit?</p>
+        </div>
+      </div>
+      <!-- banner text -->
+    </div>
+  </div>
+</section>
+
+<div class="lang-container">
+  <div class="lang-panel">
+    <a (click)="switchLanguage('ko')" style="margin-left: 10px;"><img class="lang {{ language=='ko' ? 'active' : '' }}" width="50px" src="assets/images/korean.png"/></a>
+    <a (click)="switchLanguage('en')" style="margin-left: 10px;"><img class="lang {{ language=='en' ? 'active' : '' }}" width="50px" src="assets/images/english.png"/></a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.vcenter {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.video-cls {
+  font-size: 75px;
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+@media screen and (max-width: 640px) {
+  
+}

@@ -1,0 +1,21 @@
+@media screen and (max-width: 640px) {
+  .post-preview {
+    margin: 0;
+  }
+  .about-back {
+    padding-top: 40px;
+  }
+  .buy-service-account {
+    float: right;
+    width: 300px;
+  }
+  .buy-service-account a {
+    padding: 10px 15px;
+  }
+  h2.about-title {
+    margin-bottom: 10px;
+  }
+  p.about-title {
+    font-size: 13px;
+  }
+}

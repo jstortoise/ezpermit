@@ -1,0 +1,20 @@
+footer {
+  background-image: url('../../assets/images/footer_back.png');
+}
+
+p {
+  color: #999;
+  font-size: 13px;
+}
+
+a {
+  color: #fff;
+}
+
+hr {
+  border-color: rgb(67, 114, 160);
+}
+
+.copyright {
+  float: right;
+}

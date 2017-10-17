@@ -1,0 +1,44 @@
+<div id="login-panel" class="login-panel sub-panel">
+  <form (submit)="loginUser($event)">
+    <p class="control-group">{{ 'login_sns_description' | translate }}</p>
+    <div class="control-group hcenter" style="margin-bottom: 40px;">
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <a class="btn btn-social btn-facebook"><i class="fa fa-facebook fa-fw"></i><span>FACEBOOK</span></a>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <a class="btn btn-social btn-google"><i class="fa fa-google-plus fa-fw"></i><span>GOOGLE</span></a>
+      </div>
+      <div class="cls"></div>
+    </div>
+    <div class="control-group">
+      <p style="font-size: 14px;">{{ 'login_email_description' | translate }}</p>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="{{ 'email' | translate }}" name="email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="{{ 'password' | translate }}" name="password">
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Remember me
+        </label>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <a style="color: blue;">{{ 'forgot_password' | translate }}</a>
+      </div>
+      <div class="cls"></div>
+    </div>
+    <div class="control-group hcenter" style="margin-bottom: 0;">
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <button class="btn btn-normal btn-login">{{ 'log_in' | translate }}</button>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 hcenter">
+        <a class="btn btn-normal btn-signup" id="signup-btn">{{ 'sign_up' | translate }}</a>
+      </div>
+      <div class="cls"></div>
+    </div>
+  </form>
+</div>

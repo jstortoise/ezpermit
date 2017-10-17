@@ -1,0 +1,81 @@
+.user-content {
+  position: absolute;
+  top: 40%;
+  color: #fff;
+  z-index: 998;
+  width: 320px;
+}
+.top {
+  top: 100px;
+}
+#login-header {
+  background-color: rgba(36, 173, 127, 0.8);
+  cursor: pointer;
+  padding: 30px 30px;
+}
+#login-header:hover {
+  background-color: rgba(36, 173, 127, 1);
+}
+#service-header {
+  background-color: rgba(40, 77, 91, 0.8);
+  cursor: pointer;
+}
+#service-header:hover {
+  background-color: rgba(40, 77, 91, 1);
+}
+#project-header {
+  background-color: rgba(0, 141, 204, 0.8);
+  cursor: pointer;
+  padding: 7px 30px;
+}
+#project-header:hover {
+  background-color: rgba(0, 141, 204, 1);
+}
+#project-header a.btn-normal {
+  padding: 4px 20px;
+  background: none;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+}
+
+.logo>img {
+  cursor: pointer !important;
+}
+a > img {
+  cursor: pointer !important;
+}
+.lang {
+  opacity: 0.6;
+}
+
+.lang:hover  {
+  opacity: 1;
+}
+
+a > img.active {
+  opacity: 1;
+}
+
+.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
+.expand .description {
+  display: none;
+}
+.expand .small-panel {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.expand #login-header {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}

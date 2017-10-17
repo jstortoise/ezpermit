@@ -1,0 +1,88 @@
+<div id="contact_page" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="cls"></div>
+
+        <!-- Main Content -->
+        <div class="container">
+          <div class="contact-form">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="col-lg-12 col-md-12 mx-auto">
+                    <h2 class="post-title hcenter" style="margin: 0;">
+                      <img src="assets/images/contact/contact_title.png"/>
+                    </h2>
+                </div>
+
+                <form id="ajax-contact" method="post" action="" role="form">
+                  <div class="messages" id="form-messages"></div>
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="first_name">{{ 'first_name' | translate }}</label>
+                          <input id="first_name" type="text" name="first_name" class="form-control" placeholder="{{ 'first_name' | translate }}" required="required" data-error="First Name is required.">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="last_name">{{ 'last_name' | translate }}</label>
+                          <input id="last_name" type="text" name="last_name" class="form-control" placeholder="{{ 'last_name' | translate }}" required="required" data-error="Last Name is required.">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email">{{ 'email' | translate }}</label>
+                          <input id="email" type="email" name="email" class="form-control" placeholder="{{ 'email' | translate }}" required="required" data-error="Valid email is required.">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="phone">{{ 'phone' | translate }}</label>
+                          <input id="phone" type="tel" name="phone" class="form-control" placeholder="{{ 'phone' | translate }}" required oninvalid="setCustomValidity('Please enter your correct phone number')" onchange="try{setCustomValidity('')}catch(e){}">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="form_message">{{ 'message' | translate }}</label>
+                          <textarea id="form_message" name="message" class="form-control" placeholder="{{ 'your_message' | translate }}" rows="8" required="required" data-error="Please,leave us a message."></textarea>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                        <small class="text-muted">Happy working<br>The ezPermit Team</small>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 right">
+                        <input type="submit" class="btn btn-normal btn-secondary" value="{{ 'send_message' | translate }}">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-sm-5 vcenter" style="max-height: 460px;overflow: hidden;">
+                <img src="assets/images/contact/contact_back.png" style="max-width: 100%;"/>
+              </div>
+           </div>
+
+          </div>
+
+        </div>
+        <!-- container -->
+      </div>
+    </div>
+  </div>
+</div>

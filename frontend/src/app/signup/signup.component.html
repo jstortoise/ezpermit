@@ -1,0 +1,243 @@
+<div id="signup-panel" class="sub-panel">
+  <form (submit)="registerUser($event)">
+
+    <p class="control-group">{{ 'signup_description' | translate }}</p>
+
+    <div class="control-group">
+      <label>{{ 'signup_main_info' | translate }}</label>
+      <div class="row form-group">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input class="form-control" placeholder="{{ 'last_name' | translate }}" name="lastname">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input class="form-control" placeholder="{{ 'first_name' | translate }}" name="firstname">
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input class="form-control" placeholder="{{ 'nationality' | translate }}" name="nationality">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input class="form-control" placeholder="{{ 'signup_city' | translate }}" name="city">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="{{ 'email' | translate }}" name="email">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <p class="hcenter" style="font-size: 9px;">
+        {{ 'signup_password_description_1' | translate }}<br>
+        {{ 'signup_password_description_2' | translate }}
+      </p>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="{{ 'password' | translate }}" name="password" id="password">
+        <meter max="4" id="password-strength-meter" value="1"></meter>
+        <p id="password-strength-text"></p>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="{{ 'confirm_password' | translate }}" name="confirm_password">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>{{ 'career_information' | translate }}</label>
+      <div class="form-group">
+        <label for="tob">{{ 'industry_classification' | translate }}</label>
+        <select class="form-control" name="tob">
+          <option value="1">{{ 'construction' | translate }}</option>
+          <option value="2">{{ 'manufacturing' | translate }}</option>
+          <option value="3">{{ 'service' | translate }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{ 'category' | translate }}1</label>
+        <select class="form-control" name="category1">
+          <option value="1">{{ 'general_constructor' | translate }}</option>
+          <option value="2">{{ 'specialty_contractor' | translate }}</option>
+          <option value="3">{{ 'other_transportation_equipment' | translate }}</option>
+          <option value="4">{{ 'architectural' | translate }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{ 'category' | translate }}2</label>
+        <select class="form-control" name="category2">
+          <option value="1">{{ 'building_construction' | translate }}</option>
+          <option value="2">{{ 'engineering_construction' | translate }}</option>
+          <option value="3">{{ 'foundation' | translate }}</option>
+          <option value="4">{{ 'building_equipments' | translate }}</option>
+          <option value="5">{{ 'electiricity_telecommunication' | translate }}</option>
+          <option value="6">{{ 'indoor_closing_construction' | translate }}</option>
+          <option value="7">{{ 'facility_management' | translate }}</option>
+          <option value="8">{{ 'construction_machinery_management' | translate }}</option>
+          <option value="9">{{ 'ship_boat_building' | translate }}</option>
+          <option value="10">{{ 'aircraft_spaceship' | translate }}</option>
+          <option value="11">{{ 'technical_construction' | translate }}</option>
+          <option value="12">{{ 'science_technology_service' | translate }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{ 'category' | translate }}3</label>
+        <select class="form-control" name="category3">
+          <option value="1">{{ 'regidential_building' | translate }}</option>
+          <option value="2">{{ 'non_regidential_building' | translate }}</option>
+          <option value="3">{{ 'grounding_foundation' | translate }}</option>
+          <option value="4">{{ 'civil_facility' | translate }}</option>
+          <option value="5">{{ 'building_facility_deactivation' | translate }}</option>
+          <option value="6">{{ 'infra_structure' | translate }}</option>
+          <option value="7">{{ 'faciliaty_building' | translate }}</option>
+          <option value="8">{{ 'building_equipment_installation' | translate }}</option>
+          <option value="9">{{ 'electiricity' | translate }}</option>
+          <option value="10">{{ 'telecommunication' | translate }}</option>
+          <option value="11">{{ 'painting_wall_paper' | translate }}</option>
+          <option value="12">{{ 'glass_window_door' | translate }}</option>
+          <option value="13">{{ 'construction_finishment' | translate }}</option>
+          <option value="14">{{ 'facility_management' | translate }}</option>
+          <option value="15">{{ 'constructive_machinery_management' | translate }}</option>
+          <option value="16">{{ 'building_ship_floating_structure' | translate }}</option>
+          <option value="17">{{ 'sports_entertaining_boat_building' | translate }}</option>
+          <option value="18">{{ 'aircraft_spaceship_manufacturing' | translate }}</option>
+          <option value="19">{{ 'architecture_landscapte_design' | translate }}</option>
+          <option value="20">{{ 'engineering_service' | translate }}</option>
+          <option value="21">{{ 'technical_inspection_analysis' | translate }}</option>
+          <option value="22">{{ 'measurement_geological_cartography' | translate }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{ 'category' | translate }}4</label>
+        <select class="form-control" name="category4">
+          <option value="1">{{ 'detached_house' | translate }}</option>
+          <option value="2">{{ 'apartment_house' | translate }}</option>
+          <option value="3">{{ 'other_regidential_house' | translate }}</option>
+          <option value="4">{{ 'office_commertial_building' | translate }}</option>
+          <option value="5">{{ 'manufacturer_industrial_building_construction' | translate }}</option>
+          <option value="6">{{ 'other_non_regidential_building_construction' | translate }}</option>
+          <option value="7">{{ 'grounding' | translate }}</option>
+          <option value="8">{{ 'load_building' | translate }}</option>
+          <option value="9">{{ 'bridge_tunnel_railload_construction' | translate }}</option>
+          <option value="10">{{ 'harbor_waterway_dam_other_similar_structure_construction' | translate }}</option>
+          <option value="11">{{ 'envirolment_equipment_construction' | translate }}</option>
+          <option value="12">{{ 'industrial_manufacturing_facility_construction' | translate }}</option>
+          <option value="13">{{ 'land_scape_construction' | translate }}</option>
+          <option value="14">{{ 'other_civil_facility' | translate }}</option>
+          <option value="15">{{ 'building_facility_deactivation' | translate }}</option>
+          <option value="16">{{ 'earthwork' | translate }}</option>
+          <option value="17">{{ 'boring_grouting' | translate }}</option>
+          <option value="18">{{ 'piling_basic_grounding' | translate }}</option>
+          <option value="19">{{ 'other_infra_structure' | translate }}</option>
+          <option value="20">{{ 'steel_frame_other_related_structure' | translate }}</option>
+          <option value="21">{{ 'concrete_reinforcing_bar' | translate }}</option>
+          <option value="22">{{ 'masonry_construction_stonemason' | translate }}</option>
+          <option value="23">{{ 'railload' | translate }}</option>
+          <option value="24">{{ 'underwater_construction' | translate }}</option>
+          <option value="25">{{ 'scaffolding' | translate }}</option>
+          <option value="26">{{ 'roof_in_outer_wall' | translate }}</option>
+          <option value="27">{{ 'other_outdoor_facility_building' | translate }}</option>
+          <option value="28">{{ 'piping_heat_air_conditioning' | translate }}</option>
+          <option value="29">{{ 'building_equipment_installation' | translate }}</option>
+
+          <option value="30">{{ 'sound_dust_protection_fire_proofing' | translate }}</option>
+          <option value="31">{{ 'fire_extinguishing_facilities' | translate }}</option>
+          <option value="32">{{ 'other_building_equipment_installation' | translate }}</option>
+          <option value="33">{{ 'general_electricity' | translate }}</option>
+          <option value="34">{{ 'internal_electric_wiring' | translate }}</option>
+          <option value="35">{{ 'general_communication' | translate }}</option>
+          <option value="36">{{ 'internal_communication_wiring' | translate }}</option>
+          <option value="37">{{ 'painting' | translate }}</option>
+          <option value="38">{{ 'paperwall_interior_design_catpentry' | translate }}</option>
+          <option value="39">{{ 'glass_window_door_construction' | translate }}</option>
+          <option value="40">{{ 'plastering_tiling_waterprooff' | translate }}</option>
+          <option value="41">{{ 'building_metal_structure_installation' | translate }}</option>
+          <option value="42">{{ 'other_construction_finishment' | translate }}</option>
+          <option value="43">{{ 'facility_management' | translate }}</option>
+          <option value="44">{{ 'constructive_machinery_management' | translate }}</option>
+          <option value="45">{{ 'steel_vessel_manufacturing' | translate }}</option>
+          <option value="46">{{ 'synthetic_resins_vessel_manufacturing' | translate }}</option>
+          <option value="47">{{ 'other_vessel_manufacturing' | translate }}</option>
+          <option value="48">{{ 'vessel_partial_module_manufacturing' | translate }}</option>
+          <option value="49">{{ 'manned_aircraft_spaceship_related_equipment_manufacturing' | translate }}</option>
+          <option value="50">{{ 'unmanned_aircraft_spaceship_related_equipment_manufacturing' | translate }}</option>
+          <option value="51">{{ 'architectural_design_other_service' | translate }}</option>
+          <option value="52">{{ 'city_planning_landscape_design_service' | translate }}</option>
+          <option value="53">{{ 'land_civil_engineering_service' | translate }}</option>
+          <option value="54">{{ 'environmental_engineering_service' | translate }}</option>
+          <option value="55">{{ 'other_engineering_service' | translate }}</option>
+          <option value="56">{{ 'material_constituent_analysis' | translate }}</option>
+          <option value="57">{{ 'other_technical_test_inspection_analysis' | translate }}</option>
+          <option value="58">{{ 'measurment' | translate }}</option>
+          <option value="59">{{ 'drawing' | translate }}</option>
+          <option value="60">{{ 'geological_survey' | translate }}</option>
+          <option value="61">{{ 'cartography' | translate }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{ 'etc' | translate }}</label>
+        <input class="form-control" name="etc" />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>{{ 'career_information' | translate }}</label>
+      <div class="row form-group">
+        <div class="col-lg-12">
+          <label>{{ 'career_information' | translate }}</label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <select class="form-control" name="career">
+            <option value="1">{{ 'measurer' | translate }}</option>
+            <option value="2">{{ 'design' | translate }}</option>
+            <option value="3">{{ 'quality_administrator' | translate }}</option>
+            <option value="4">{{ 'administrator' | translate }}</option>
+            <option value="5">{{ 'construction' | translate }}</option>
+            <option value="6">{{ 'supervisor' | translate }}</option>
+            <option value="7">{{ 'official_affairs' | translate }}</option>
+            <option value="8">{{ 'safety' | translate }}</option>
+          </select>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <select class="form-control" name="job">
+            <option value="1">{{ 'staff' | translate }}</option>
+            <option value="2">{{ 'head_staff' | translate }}</option>
+            <option value="3">{{ 'deputy_manager' | translate }}</option>
+            <option value="4">{{ 'manager' | translate }}</option>
+            <option value="5">{{ 'deputy_general_manager' | translate }}</option>
+            <option value="6">{{ 'team_manager' | translate }}</option>
+            <option value="7">{{ 'general_manager' | translate }}</option>
+            <option value="8">{{ 'director' | translate }}</option>
+            <option value="9">{{ 'president' | translate }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-lg-12">
+          <label>{{ 'career_duration' | translate }}</label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input type="date" class="form-control" name="sdate" />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <input type="date" class="form-control" name="edate" />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>{{ 'purpose' | translate }}</label>
+      <select class="form-control" name="purpose">
+        <option value="">n/a</option>
+      </select>
+    </div>
+
+    <div class="control-group" style="text-align: center;" required>
+      <input type="checkbox" class="form-check-input">
+      <label class="form-check-label" style="font-size: 9px;">
+        {{ 'agree_terms_1' | translate }}<br>
+        {{ 'agree_terms_2' | translate }}
+      </label>
+    </div>
+    <div class="control-group hcenter" style="margin-bottom: 0;">
+      <button class="btn btn-normal btn-signup">{{ 'sign_up_1' | translate }}</button>
+    </div>
+  </form>
+</div>

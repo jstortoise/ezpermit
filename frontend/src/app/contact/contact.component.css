@@ -1,0 +1,26 @@
+.btn {
+  border: 0;
+  border-radius: 5px;
+}
+.social-btn {
+  padding: 10px;
+}
+.btn-normal {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-primary {
+  background: #4973c1;
+}
+.btn-secondary {
+  background: #2fa5f8;
+}
+.btn-third {
+  background: #e27a77;
+}
+.btn:hover {
+  background-color: #3d3d3d;
+}
+.right {
+  text-align: right;
+}
